@@ -32,6 +32,13 @@ y = encoded_df['unacc']
 # 훈련 및 테스트 세트 분리
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
+# X_train, X_test, y_train, y_test의 shape 확인
+print("\n=== 데이터셋 Shape ===")
+print("X_train shape:", X_train.shape)
+print("X_test shape:", X_test.shape)
+print("y_train shape:", y_train.shape)
+print("y_test shape:", y_test.shape)
+
 #dt
 dt_model = DecisionTreeClassifier(random_state=42)
 dt_model.fit(X_train, y_train)
